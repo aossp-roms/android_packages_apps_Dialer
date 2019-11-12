@@ -67,7 +67,8 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     libphonenumber \
     org.cyanogenmod.platform.sdk \
     picasso-dialer \
-    uicommon
+    uicommon \
+    telephony-common
 
 LOCAL_PACKAGE_NAME := Dialer
 LOCAL_CERTIFICATE := shared
@@ -82,6 +83,8 @@ include $(CONTACTS_COMMON_LOOKUP_PROVIDER)/phonenumber_lookup_provider.mk
 # Uncomment the following line to build against the current SDK
 # This is required for building an unbundled app.
 #LOCAL_SDK_VERSION := current
+
+LOCAL_JAVA_LIBRARIES := org.apache.http.legacy
 
 include $(BUILD_PACKAGE)
 
